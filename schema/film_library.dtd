@@ -1,14 +1,13 @@
-<!DOCTYPE filmLibrary [
-    <!ELEMENT filmLibrary (film*)>
-    <!ELEMENT film (title, genre+, producer*, composer*, actor*, date, gross?, cert, views?, lang)>
-    <!ELEMENT title (#PCDATA)>
-    <!ELEMENT genre (#PCDATA)>
-    <!ELEMENT producer (#PCDATA)>
-    <!ELEMENT composer (#PCDATA)>
-    <!ELEMENT actor (#PCDATA)>
-    <!ELEMENT date (#PCDATA)>
-    <!ELEMENT gross (#PCDATA)>
-    <!ELEMENT cert (#PCDATA)>
-    <!ELEMENT views (#PCDATA)>
-    <!ELEMENT lang (#PCDATA)>
-]>
+
+<!ELEMENT filmLibrary (film*)>
+<!ELEMENT film (title, genre+, producer*, composer*, actor*, date, gross?, cert, views?, lang)>
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT genre (#PCDATA)>
+<!ELEMENT producer (#PCDATA)>
+<!ELEMENT composer (#PCDATA)>
+<!ELEMENT actor (#PCDATA)>
+<!ELEMENT date (#PCDATA)>
+<!ELEMENT gross (#PCDATA)>
+<!ELEMENT cert (#PCDATA)>
+<!ELEMENT views (#PCDATA)>
+<!ELEMENT lang (#PCDATA)>
