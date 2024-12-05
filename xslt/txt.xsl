@@ -52,7 +52,7 @@
 
             <xsl:text>Language: </xsl:text>
             <xsl:value-of select="lang"/>
-            <xsl:text>&#10;&#10;</xsl:text> <!-- Пустая строка между фильмами -->
+            <xsl:text>&#10;&#10;</xsl:text>
         </xsl:for-each>
     </xsl:template>
 

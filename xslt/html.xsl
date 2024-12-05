@@ -23,10 +23,10 @@
                         text-align: left;
                     }
                     th {
-                        background-color: #f2f2f2;
+                        background-color: #B0E0E6;
                     }
                     tr:nth-child(even) {
-                        background-color: #f9f9f9;
+                        background-color: #87CEFA;
                     }
                 </style>
             </head>
@@ -45,7 +45,6 @@
                         <th>Views</th>
                         <th>Language</th>
                     </tr>
-                    <!-- Обрабатываем каждый фильм -->
                     <xsl:for-each select="filmLibrary/film">
                         <tr>
                             <td><xsl:value-of select="title"/></td>

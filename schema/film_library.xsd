@@ -11,10 +11,10 @@
                             <xs:element name="producer" minOccurs="0" maxOccurs="unbounded" type="xs:string"/>
                             <xs:element name="composer" minOccurs="0" maxOccurs="unbounded" type="xs:string"/>
                             <xs:element name="actor" minOccurs="0" maxOccurs="unbounded" type="xs:string"/>
-                            <xs:element name="date" type="xs:string"/>
-                            <xs:element name="gross" minOccurs="0" type="xs:string"/>
+                            <xs:element name="date" type="xs:date"/>
+                            <xs:element name="gross" minOccurs="0" type="xs:integer"/>
                             <xs:element name="cert" type="xs:string"/>
-                            <xs:element name="views" minOccurs="0" type="xs:string"/>
+                            <xs:element name="views" minOccurs="0" type="xs:integer"/>
                             <xs:element name="lang" type="xs:string"/>
                         </xs:sequence>
                     </xs:complexType>

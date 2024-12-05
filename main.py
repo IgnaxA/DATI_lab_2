@@ -9,11 +9,12 @@ xsd = etree.XMLSchema(etree.parse("schema/film_library.xsd"))
 print(f"Result of dtd validation: {xsd.validate(xml_doc)}")
 
 txt_transform = etree.XSLT(etree.parse("xslt/txt.xsl"))
-print(txt_transform(xml_doc))
+res = txt_transform(xml_doc)
+with open("filmLibrary.txt", "wb") as f:
+    f.write(res)
 
 html_transform = etree.XSLT(etree.parse("xslt/html.xsl"))
 res = html_transform(xml_doc)
-
 with open("filmLibrary.html", "wb") as f:
     f.write(etree.tostring(res, pretty_print=True))
 
