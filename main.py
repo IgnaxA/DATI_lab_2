@@ -1,4 +1,5 @@
 from lxml import etree
+import random
 
 xml_doc: etree = etree.parse("film_data.xml")
 
@@ -19,12 +20,20 @@ with open("filmLibrary.html", "wb") as f:
     f.write(etree.tostring(res, pretty_print=True))
 
 
-def exec_query(xml: etree, query: str) -> None:
+def exec_query(xml: etree, query: str, is_random: bool = False) -> None:
     print("==================================")
     print(f"Выполнение запроса: {query}")
     result: etree = xml.xpath(query)
+    res = []
+
     for film in result:
-        print(film.find("title").text)
+        res.append(film.find("title").text)
+
+    if is_random:
+        random.shuffle(res)
+
+    for film in res:
+        print(film)
 
     print("==================================\n")
 
@@ -32,6 +41,6 @@ def exec_query(xml: etree, query: str) -> None:
 exec_query(xml_doc, "/filmLibrary/film[genre='Action']")
 exec_query(xml_doc, "/filmLibrary/film[count(actor) > 5]")
 exec_query(xml_doc, "/filmLibrary/film[producer='Quentin Tarantino' and actor='Quentin Tarantino']")
-exec_query(xml_doc, "/filmLibrary/film[genre='Drama']")
+exec_query(xml_doc, "/filmLibrary/film[genre='Drama']", True)
 exec_query(xml_doc, "/filmLibrary/film[count(genre) > 3 and contains(title, 'Django')]")
 
